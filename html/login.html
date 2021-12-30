@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>背景轮换</title>
+		<script type="text/javascript" src="../js/vue.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/style1.css"/>
+		
+	</head>
+	<body>
+		
+		<div id="login">
+			<center>
+				<h4 style="font-size: 50px; font-family: 楷体;color: white;">连廊大酒店</h4>
+				
+				<p><label class="key"><input class="in" type="text" id="in1" placeholder="请输入你的账户名称" v-model="count"/></label></p>
+				<p><label class="key"><input type="password" class="in" id="in2" placeholder="请输入你的账户密码" v-model="pass" /></label></p>
+				<div id="dic">
+					<div id="dic1">
+						<input type="text" id="in3" class="ver" placeholder="验证码不分大小写" v-model="verti" />
+						<p style="color: red;" id="output">{{message}}</p>
+					</div>
+					<div id="dic2">
+						<canvas class="infor" id="canvas"  ></canvas>
+					</div>
+				</div>
+				<br><br><br><br><br>
+				<p style="float: none;"><button  type="button" id="but" v-on:click="submit">登录</button>&nbsp;&nbsp;&nbsp;&nbsp;
+				<button type="button" id="butt" v-ok:click="zhuce">注册</button></p>
+			</center>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="../js/content.js"></script>
+<script type="text/javascript" src="../js/ver.js"></script>
+<script type="text/javascript" src="../js/background.js"></script>
+
