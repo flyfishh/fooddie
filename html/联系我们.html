@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客服</title>
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/kefu.css"/>
+</head>
+<body>
+<div class="chatbox" style="height:700px">
+    <div class="chat_top fn-clear">
+		<p class="p">客服聊天</p>
+		<a href="../index.htm" id="return">返回商店</a>
+        <div class="uinfo fn-clear">
+			
+			
+            <div class="uface"><img src="../images/头像.jpeg" width="40" height="40" alt=""></div>
+            <div class="uname">
+                连廊恶霸<i class="fontico down"></i>
+                <ul class="managerbox">
+                    <li><a href="#"><i class="fontico lock"></i>修改密码</a></li>
+                    <li><a href="#"><i class="fontico logout"></i>退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="chat_message fn-clear">
+        <div class="chat_left">
+            <div class="message_box" id="message_box">
+               
+
+                <div class="msg_item fn-clear">
+                    <div class="uface"><img src="../images/客服2.jpeg" width="40" height="40" alt=""></div>
+                    <div class="item_right">
+                        <div class="msg">为庆祝元旦佳节，本店全部菜品满200减50 满400减150 满600减200多买多送上不封顶；酒水区全场九折；
+						</div>
+                        <div class="name_time">春娇 1分钟前</div>
+                    </div>
+                </div>
+
+                <div class="msg_item fn-clear">
+                    <div class="uface"><img src="../images/客服1.jpeg" width="40" height="40" alt=""></div>
+                    <div class="item_right">
+                        <div class="msg own">欢迎咨询里斯国际酒店，请问有什么可以帮您</div>
+                        <div class="name_time">志明 30秒前</div>
+                    </div>
+                </div>
+            </div>
+            <div class="write_box">
+                <textarea id="message" name="message" class="write_area" placeholder="说点啥吧..."></textarea>
+                <input type="hidden" name="fromname" id="fromname" value="河图">
+                <input type="hidden" name="to_uid" id="to_uid" value="0">
+                <div class="facebox fn-clear">
+                    <div class="expression"></div>
+                    <div class="chat_type" id="chat_type">双击用户私聊</div>
+                    <button name="" class="sub_but">发送</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat_right">
+            <ul class="user_list" title="双击用户私聊">
+                <!--<li class="fn-clear selected"><em>所有用户</em></li>-->
+                <li class="fn-clear" data-id="2"><span><img src="../images/客服1.jpeg" width="30" height="30" alt=""></span><em>春娇</em></li>
+                <li class="fn-clear" data-id="3"><span><img src="../images/客服2.jpeg" width="30" height="30" alt=""></span><em>志明</em></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(e) {
+    $('#message_box').scrollTop($("#message_box")[0].scrollHeight + 20);
+    $('.uname').hover(
+        function() {
+            $('.managerbox').stop(true, true).slideDown(100);
+        },
+        function() {
+            $('.managerbox').stop(true, true).slideUp(100);
+        }
+    );
+
+    var fromname = $('#fromname').val();
+    var to_uid = 0; // 默认为0,表示发送给所有用户
+    var to_uname = '';
+    $('.user_list > li').dblclick(function() {
+        to_uname = $(this).find('em').text();
+        to_uid = $(this).attr('data-id');
+        if (to_uname == fromname) {
+            alert('您不能和自己聊天!');
+            return false;
+        }
+        if (to_uname == '所有用户') {
+            $("#toname").val('');
+            $('#chat_type').text('群聊');
+        } else {
+            $("#toname").val(to_uid);
+            $('#chat_type').text('您正和 ' + to_uname + ' 聊天');
+        }
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $('#message').focus().attr("placeholder", "您对" + to_uname + "说：");
+    });
+
+    $('.sub_but').click(function(event) {
+        sendMessage(event, fromname, to_uid, to_uname);
+    });
+
+    /*按下按钮或键盘按键*/
+    $("#message").keydown(function(event) {
+        var e = window.event || event;
+        var k = e.keyCode || e.which || e.charCode;
+        //按下ctrl+enter发送消息
+        if ((event.ctrlKey && (k == 13 || k == 10))) {
+            sendMessage(event, fromname, to_uid, to_uname);
+        }
+    });
+});
+
+function sendMessage(event, from_name, to_uid, to_uname) {
+    var msg = $("#message").val();
+    if (to_uname != '') {
+        msg = '您对 ' + to_uname + ' 说： ' + msg;
+    }
+    var htmlData = '<div class="msg_item fn-clear">' +
+        '   <div class="uface"><img src="img/头像.jpeg" width="40" height="40"  alt=""/></div>' +
+        '   <div class="item_right">' +
+        '     <div class="msg own">' + msg + '</div>' +
+        '     <div class="name_time">' + '连廊恶霸' + '  30秒前</div>' +
+        '   </div>' +
+        '</div>';
+    $("#message_box").append(htmlData);
+    $('#message_box').scrollTop($("#message_box")[0].scrollHeight + 20);
+    $("#message").val('');
+}
+</script>
+
+</body>
+</html>

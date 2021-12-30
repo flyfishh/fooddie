@@ -3,6 +3,7 @@
 	height: 585px;
 	background-size: 100% 780px;
 	overflow: hidden;
+	
 }
 .rg_layout .rg_form{
 	width: 886px;
@@ -11,6 +12,10 @@
 	margin:24px auto;
 	border:8px solid #eeeeee;
 	box-sizing: border-box;
+	background-image: url(../images/registerBg.jpg) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
 
 .rg_layout .rg_form > .rg_form_left{

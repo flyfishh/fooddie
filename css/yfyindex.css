@@ -98,3 +98,7 @@
     width: 30px;
     height: 25px;
 }
+.gouwuche a:visited{
+    color: #fff;
+    text-decoration: none;
+}

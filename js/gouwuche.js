@@ -98,6 +98,13 @@ function loadmenu() {
             $btn2.prop('id','btn2');
             $btn2.prop('value','结算');
             $btn2.click(function(){
+                var nowurl = window.location.href;
+                var nowurl_len = nowurl.length;
+                var url = nowurl.substring(nowurl_len-9,nowurl_len-4);
+                if(url=="index")
+                // file:///d:/yfyprogram/Web/fooddie%200.4/fooddie/index.htm
+                window.location.href = "./html/购物车结算.html";
+                else
                 window.location.href = "../html/购物车结算.html";
             })
             $li_last = $('<li></li>');
