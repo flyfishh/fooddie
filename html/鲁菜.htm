@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>鲁菜</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/lv1.css" />
+	<link rel="stylesheet" href="../css/yfyindex.css">
+	<script src="../js/gouwuche.js"></script>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		$(function () { 
+			showmenu();
+		 })
+	</script>
+	<style>
+		#main{
+			height:1531px;
+		}
+	</style>
+</head>
+<body>
+	<!--顶部导航栏-->
+	<div class="one">
+		<div class="one_cantent">
+			<img src="../images/1.jpg">
+			<img src="../images/2.jpg">
+			<img src="../images/3.jpg">
+			<img src="../images/4.jpg">
+			<img src="../images/5.jpg">
+		</div>
+	</div>
+	<div id="topnav">
+		<div id="top">
+			<p id="logo"><a href="../index.htm"><img src="../images/logo.png"/></a></p>	
+			<p id="bread">您的位置：<a href="../index.htm">首页</a> > <strong>鲁菜</strong></p>
+			<ul id="toplist">
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">独家菜单</a></li>
+					<li><a href="#">登录</a>&nbsp;|</li>
+					<li><a href="register.html">注册</a>&nbsp;|</li>
+					<li><a href="#">购物车</a>&nbsp;|</li>
+			</ul>
+			<form id="topform">
+			<input />
+			<input type="submit" id="sbmt" value="搜索">
+			</form>
+			<div class="index_gouwuche">
+				<div id="gwc_show"><a href="#">已点菜品</a></div>
+				<ul id="gwc_menu">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--中部主体-->
+	<div id="main">
+	 <ul id="nav">
+		 <li><a id="current" href="鲁菜.htm">鲁菜</a></li><li><a href="川菜.htm"><strong>川菜</strong></a></li><li><a href="粤菜.htm">粤菜</a></li><li><a href="苏菜.htm">苏菜</a></li><li><a href="浙菜.htm">浙菜</a></li><li><a href="湘菜.htm">湘菜</a></li><li><a href="闽菜.htm">闽菜</a></li><li><a href="徽菜.htm">徽菜</a></li>
+	 </ul>	
+		
+		
+		<h1>糖醋鲤鱼</h1>
+		<div class="lft_img"><img src="../images/糖醋鲤鱼.jpg"\></div>
+		<div class="rgt_txt">
+           <p>糖醋鲤鱼”是山东济南的传统名菜。济南北临黄河，黄河鲤鱼不仅肥嫩鲜美，而且金鳞赤尾，形态可爱，是宴会上的佳肴。《济南府志》上早有“黄河之鲤，南阳之蟹，且入食谱”的记载。</p>
+		<p><a href="糖醋鲤鱼.htm">了解更多...</a></p></div>
+		<p><input type="button" class="shopButtonR" style="margin-top: 40px;" onclick="addfood(1)" id="btn1" value="加入菜单"></p>
+		<br class="clear"/>
+		<h1>芙蓉鸡片</h1>
+		<div class="lft_txt"><p>芙蓉鸡片，是一道鲁菜名菜，成名后淮扬菜、川菜等菜系都有该菜品。通常都是以鸡脯肉、鸡蛋等食材制作而成。成菜后，肉片色泽洁白，软嫩滑香，形如芙蓉。</p>
+		<p><a href="芙蓉鸡片.htm">了解更多...</a></p>
+		<p><br><br><input type="button" class="shopButtonL"  onclick="addfood(2)" id="btn1" value="加入菜单"></p>
+		</div>
+		<div class="rgt_img"><img src="../images/芙蓉鸡片.jpg"\></div>
+		<br class="clear"/>
+		<h1>葱烧海参</h1>	
+		<div class="lft_img"><img src="../images/葱烧海参.jpg"\></div>
+		<div class="rgt_txt"><p>葱烧海参是山东省胶东地区（指烟台、青岛等地）的一道特色名菜，属于鲁菜系，该菜品也是青岛十大特色名菜之一 ；该菜品从山东源入，以水发海参和大葱为主料，其海参清鲜，柔软香滑，葱段香浓，食后无余汁。是“古今八珍”之一，葱香味醇，营养丰富，滋肺补肾。</p>
+			<p>2018年9月10日，“中国菜”正式发布，“葱烧海参“被评为山东十大经典名菜。</p>
+			<p><a href="葱烧海参.htm">了解更多...</a></p>
+			<p><input type="button" class="shopButtonR" style="margin-top: -15px;" onclick="addfood(3)" id="btn1" value="加入菜单"></p>
+		</div>
+		
+	</div>
+<div id="footer">
+		<p>Copyright 2020, Beijing, China</p>
+</div>
+</body>
+</html>

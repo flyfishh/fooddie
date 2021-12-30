@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>川菜</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/lv1.css" />
+	<link rel="stylesheet" href="../css/yfyindex.css">
+	<script src="../js/gouwuche.js"></script>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		$(function () { 
+			showmenu();
+		 })
+	</script>
+	<style>
+		#main{
+			height:1531px;
+		}
+	</style>
+</head>
+<body>
+	<!--顶部导航栏-->
+	<div id="topnav">
+		<div id="top">
+			<p id="logo"><a href="../index.htm"><img src="../images/logo.png"/></a></p>	
+			<p id="bread">
+				您的位置：<a href="../index.htm">首页</a> > <strong>川菜</strong></p>
+			<ul id="toplist">
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">独家菜单</a></li>
+					<li><a href="#">登录</a>&nbsp;|</li>
+					<li><a href="register.html">注册</a>&nbsp;|</li>
+					<li><a href="#">购物车</a>&nbsp;|</li>
+			</ul>
+			<form id="topform">
+			<input />
+			<input type="submit" id="sbmt" value="搜索">
+			</form>
+			<div class="index_gouwuche">
+				<div id="gwc_show"><a href="#">已点菜品</a></div>
+				<ul id="gwc_menu">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--中部主体-->
+	<!-- 轮播 -->
+	<div class="one">
+		<div class="one_cantent">
+			<img src="../images/1.jpg">
+			<img src="../images/2.jpg">
+			<img src="../images/3.jpg">
+			<img src="../images/4.jpg">
+			<img src="../images/5.jpg">
+		</div>
+	</div>
+	<div id="main">
+	
+	 <ul id="nav">
+		 <li><a  href="鲁菜.htm">鲁菜</a></li><li><a id="current" href="#"><strong>川菜</strong></a></li><li><a   href="粤菜.htm">粤菜</a></li><li><a href="苏菜.htm">苏菜</a></li><li><a href="浙菜.htm">浙菜</a></li><li><a href="湘菜.htm">湘菜</a></li><li><a href="闽菜.htm">闽菜</a></li><li><a href="徽菜.htm">徽菜</a></li>
+	 </ul>	
+		
+		<h1>东坡肘子</h1>
+		<div class="lft_img"><img src="../images/东坡肘子.jpg"\></div>
+		<div class="rgt_txt"><p>东坡肘子，四川省眉山市特产。</p>
+			<p>东坡肘子具有汤汁乳白、猪肘烂软、肉质细嫩、肉味醇香、有嚼头、肥而不腻等优点。</p>
+			<p>2013年12月，东坡肘子成功获批国家地理标志保护产品称号。</p>
+			<p><a href="东坡肘子.htm">了解更多...</a></p>
+			<p><input type="button" class="shopButtonR" onclick="addfood(4)" id="btn1" value="加入菜单"></p>
+		</div>
+		<br class="clear"/>
+		<h1>宫保鸡丁</h1>
+		<div class="lft_txt"><p>宫保鸡丁选用鸡肉为主料，佐以花生米、黄瓜、辣椒等辅料烹制而成。 红而不辣、辣而不猛、香辣味浓、肉质滑脆。由于其入口鲜辣，鸡肉的鲜嫩配合花生的香脆。</p><p>2018年9月，被评为“中国菜”之贵州十大经典名菜、四川十大经典名菜。
+		</p><p><a href="宫保鸡丁.htm">了解更多...</a></p>
+		<p><input type="button" class="shopButtonL" onclick="addfood(5)" id="btn1" value="加入菜单"></p>
+		</div>
+		<div class="rgt_img"><img src="../images/宫保鸡丁.jpg"\></div>
+		<br class="clear"/>
+		<h1>毛血旺</h1>	
+		<div class="lft_img"><img src="../images/毛血旺.jpg"\></div>
+		<div class="rgt_txt"><p>毛血旺以鸭血为制作主料，烹饪技巧以煮菜为主，口味属于麻辣味。起源于重庆，流行于重庆和西南地区，是一道著名的传统菜式。这道菜是将生血旺现烫现吃，且毛肚杂碎为主料，遂得名。</p>
+			<p>毛血旺是重庆市的特色菜，也是渝菜江湖菜的鼻祖之一，已经列入国家标准委员会《渝菜烹饪标准体系》。</p>
+			<p><a href="毛血旺.htm">了解更多...</a></p>
+			<p><input type="button" class="shopButtonR" onclick="addfood(6)" id="btn1" value="加入菜单"></p>
+		</div>
+		
+	</div>
+<div id="footer">
+		<p>Copyright 2020, Beijing, China</p>
+</div>
+</body>
+</html>

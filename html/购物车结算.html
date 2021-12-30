@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车结算</title>
+    <link rel="stylesheet" href="../css/yfyindex.css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/gouwuche.js"></script>
+    <script src="../js/vue.js"></script>
+    <style>
+        body{
+            background-image: url("../images/东坡肉.jpg ");
+        }
+    </style>
+</head>
+<body>
+        <div id="app">
+            <table id="tab">
+                <tr>
+                    <td style="width: 10px;">选择</td>
+                    <td>菜品名称</td>
+                    <td>菜品图片</td>
+                    <td>菜品价格</td>
+                    <td>菜品数量</td>
+                </tr>
+                <tr v-for="(id,i) in nowmenuid">
+                    <td class="tabchoose"><input id="check" @click="checkchange(id)" v-model="menu[id-1].check" type="checkbox"></td>
+                    <td class="tabname">{{menu[id-1].name}}</td>
+                    <td class="tabimg"><img v-bind:src="'../images/'+menu[id-1].url"></td>
+                    <td class="tabmoney">{{menu[id-1].money}}</td>
+                    <td class="tabnum">
+                        <input id="jianbtn" type="button" @click="jian_btn(id)" :disabled="menu[id-1].count ===1"  value="-">
+                        <input type="text" id="num" style="width: 20px;" v-model="menu[id-1].count"> 
+                        <input id="jiabtn" type="button" @click="jia_btn(id)" value="+">
+                    </td>
+                </tr>
+                <tr >
+                    <td style="border: none;"><button @click="deletemeal">删除</button></td>
+                    <td style="border: none;" colspan="3"></td>
+                    <td style="border: none;" v-model='price'>总金额：￥{{totalprice}}</td>
+                </tr>
+            </table>
+        </div>
+</body>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            menu : foodlist,
+            price :0,
+            checkall: false,
+            nowmenuid : []
+        },
+        computed:{
+            totalprice:function(){
+                var price = 0;
+                for(var i = 0;i<this.nowmenuid.length;i++)
+                {
+                    if(this.menu[this.nowmenuid[i]-1].check == true)
+                    price += this.menu[this.nowmenuid[i]-1].money * this.menu[this.nowmenuid[i]-1].count;
+                }
+                return price;
+            }
+        },
+        created:function(){
+            this.getid();
+        },
+        methods:{
+            getid:function(){
+                for(var i = 1;i<=foodlist.length;i++)
+                {
+                if(getCookie('foodid'+i)!=null)
+                {
+                    this.nowmenuid.push(i);
+                }
+                }
+            },
+            jia_btn:function(id){
+                this.menu[id-1].count++;
+            },
+            jian_btn:function(id){
+                this.menu[id-1].count--;
+            },
+            checkchange:function(id){
+                this.menu[id-1].check = !this.menu[id-1].check;
+            },
+            deletemeal:function(){
+                for(var i = 0;i<this.nowmenuid.length;i++)
+                {
+                    if(this.menu[this.nowmenuid[i]-1].check == true)
+                    {
+                        document.cookie = 'foodid'+(this.menu[this.nowmenuid[i]-1].id) + '=0;expires=' + new Date(0).toUTCString()+";path=/";
+                        this.nowmenuid.splice(i,1);
+                        //alert(this.menu[this.nowmenuid[i]-1].id)
+                        
+                        i--;
+                        //this.menu.splice(this.nowmenuid[i]-1,1);
+                    }
+                }
+                
+            }
+        }
+    })
+</script>
+</html>

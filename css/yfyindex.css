@@ -1,0 +1,100 @@
+.index_gouwuche{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -23px;
+    width: 200px;
+    height: 25px;
+    background-color: white;
+    text-align: center;
+}
+#gwc_show a{
+    font-size: 23px;
+    text-decoration: none;
+}
+#gwc_show a:hover{
+    
+}
+
+.index_gouwuche li{
+    list-style: none;
+  }
+#gwc_menu{
+    font-size: 20px;
+      margin-top: 0px;
+    display: none;
+    margin-left: 0px;
+    width: 200px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.6);
+}
+#gwc_menu li{
+    text-align: left;
+   
+}
+#gwc_menu a{
+    color: #fff;
+    text-decoration: none;
+}
+#gwc_menu #btn{
+    width: 90px;
+}
+#gwc_menu #btn2{
+    width: 90px;
+    margin-left: 20px;
+}
+#tab{
+    margin: auto;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    text-align: center;
+    margin-bottom: 100px;
+    width:600px;
+    height:auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
+        position: absolute;
+}
+.tabimg img{
+    width: 200px;
+    height: auto;
+}
+.tabimg{
+    width: 220px;
+}
+#tab td{
+    border: black 1px solid;
+}
+.tabname{
+    width: 70px;
+    text-align: center;
+}
+.tabmoney{
+    width: 40px;
+    text-align: center;
+}
+.tabchoose{
+    width: 40px;
+    text-align: center;
+}
+.tabchoose #check{
+    width: 30px;
+}
+.tabnum{
+    text-align: center;
+}
+#jianbtn{
+    width: 30px;
+    height: 30px;
+}
+#jiabtn{
+    width: 30px;
+    height: 30px;
+}
+#num{
+    width: 30px;
+    height: 25px;
+}

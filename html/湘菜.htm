@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>湘菜</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/lv1.css" />
+	<link rel="stylesheet" href="../css/yfyindex.css">
+	<script src="../js/gouwuche.js"></script>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		$(function () { 
+			showmenu();
+		 })
+	</script>
+	<style>
+		#main{
+			height:1531px;
+		}
+	</style>
+</head>
+<body>
+	<!--顶部导航栏-->
+	<div class="one">
+		<div class="one_cantent">
+			<img src="../images/1.jpg">
+			<img src="../images/2.jpg">
+			<img src="../images/3.jpg">
+			<img src="../images/4.jpg">
+			<img src="../images/5.jpg">
+		</div>
+	</div>
+	<div id="topnav">
+		<div id="top">
+			<p id="logo"><a href="../index.htm"><img src="../images/logo.png"/></a></p>	
+			<p id="bread">您的位置：<a href="../index.htm">首页</a> > <strong>湘菜</strong></p>
+			<ul id="toplist">
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">独家菜单</a></li>
+					<li><a href="#">登录</a>&nbsp;|</li>
+					<li><a href="register.html">注册</a>&nbsp;|</li>
+					<li><a href="#">购物车</a>&nbsp;|</li>
+			</ul>
+			<form id="topform">
+			<input />
+			<input type="submit" id="sbmt" value="搜索">
+			</form>
+			<div class="index_gouwuche">
+				<div id="gwc_show"><a href="#">已点菜品</a></div>
+				<ul id="gwc_menu">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--中部主体-->
+	<div id="main">
+	 <ul id="nav">
+		 <li><a  href="鲁菜.htm">鲁菜</a></li><li><a href="川菜.htm"><strong>川菜</strong></a></li><li><a href="粤菜.htm">粤菜</a></li><li><a  href="苏菜.htm">苏菜</a></li><li><a  href="浙菜.htm">浙菜</a></li><li><a id="current" href="湘菜.htm">湘菜</a></li><li><a href="闽菜.htm">闽菜</a></li><li><a href="徽菜.htm">徽菜</a></li>
+	 </ul>	
+		<h1>组庵鱼翅</h1>
+		<div class="lft_img"><img src="../images/组庵鱼翅.jpg"\></div>
+		<div class="rgt_txt">
+           <p>组庵鱼翅，又叫红煨鱼翅，是湖南省地方传统名菜，属湘菜系。此菜颜色淡黄、汁明油亮、软糯柔滑、鲜咸味美、醇香适口。组庵鱼翅用料讲究，制作独特。此菜味道醇厚，鱼翅糯软，营养丰富，实为菜中珍品。</p>
+		<p><a href="组庵鱼翅.htm">了解更多...</a></p></div>
+		<p><input type="button" class="shopButtonR" style="margin-top: 120px;" onclick="addfood(16)" id="btn1" value="加入菜单"></p>
+		<br class="clear"/>
+		<h1>全家福</h1>
+		<div class="lft_txt"><p>全家福菜是海南人婚庆喜爱的一道菜，尤其是海南文昌人办酒席时，第一道菜上的便是“全家福”。</p>
+		<p>全家福其实是一道杂锦菜，这菜所选用的食材多达十几种，海味食材以干鱿鱼、新鲜的基围虾、新鲜鱿鱼为主，菜类包括干货冬菇、腐竹、木耳坡芹、胡萝卜等。</p>
+		
+		<p><a href="全家福.htm">了解更多...</a></p>
+		<p><input type="button" class="shopButtonL"  onclick="addfood(17)" id="btn1" value="加入菜单"></p>
+		</div>
+		<div class="rgt_img"><img src="../images/全家福.jpg"\></div>
+		<br class="clear"/>
+		<h1>百鸟朝凤</h1>	
+		<div class="lft_img"><img src="../images/百鸟朝凤.jpg"\></div>
+		<div class="rgt_txt"><p>百鸟朝凤是一道色香味俱全的名肴，属于湘菜系。主要食材是嫩鸡和猪肉，主要烹饪工艺是炖。成品形如百鸟朝凤，色泽鲜艳、鸡烂脱骨、滋味香醇。</p>
+			<p><a href="百鸟朝凤.htm">了解更多...</a></p>
+			<p><input type="button" class="shopButtonR"  onclick="addfood(18)" id="btn1" value="加入菜单"></p>
+		</div>
+		
+	</div>
+<div id="footer">
+		<p>Copyright 2020, Beijing, China</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>浙菜</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/lv1.css" />
+	<link rel="stylesheet" href="../css/yfyindex.css">
+	<script src="../js/gouwuche.js"></script>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		$(function () { 
+			showmenu();
+		 })
+	</script>
+	<style>
+		#main{
+			height:1531px;
+		}
+	</style>
+</head>
+<body>
+	<!--顶部导航栏-->
+	<div class="one">
+		<div class="one_cantent">
+			<img src="../images/1.jpg">
+			<img src="../images/2.jpg">
+			<img src="../images/3.jpg">
+			<img src="../images/4.jpg">
+			<img src="../images/5.jpg">
+		</div>
+	</div>
+	<div id="topnav">
+		<div id="top">
+			<p id="logo"><a href="../index.htm"><img src="../images/logo.png"/></a></p>	
+			<p id="bread">您的位置：<a href="../index.htm">首页</a> > <strong>浙菜</strong></p>
+			<ul id="toplist">
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">独家菜单</a></li>
+					<li><a href="#">登录</a>&nbsp;|</li>
+					<li><a href="register.html">注册</a>&nbsp;|</li>
+					<li><a href="#">购物车</a>&nbsp;|</li>
+			</ul>
+			<form id="topform">
+			<input />
+			<input type="submit" id="sbmt" value="搜索">
+			</form>
+			<div class="index_gouwuche">
+				<div id="gwc_show"><a href="#">已点菜品</a></div>
+				<ul id="gwc_menu">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--中部主体-->
+	<div id="main">
+	 <ul id="nav">
+		 <li><a  href="鲁菜.htm">鲁菜</a></li><li><a href="川菜.htm"><strong>川菜</strong></a></li><li><a href="粤菜.htm">粤菜</a></li><li><a  href="苏菜.htm">苏菜</a></li><li><a id="current" href="浙菜.htm">浙菜</a></li><li><a href="湘菜.htm">湘菜</a></li><li><a href="闽菜.htm">闽菜</a></li><li><a href="徽菜.htm">徽菜</a></li>
+	 </ul>	
+		
+		
+		<h1>东坡肉</h1>
+		<div class="lft_img"><img src="../images/东坡肉.jpg"\></div>
+		<div class="rgt_txt">
+           <p>东坡肉又名滚肉、红烧肉。是江南地区汉族传统名菜，属于浙菜系，同时也属于川菜系，以猪肉为主要食材</p>
+			<p>东坡肉的主料和造型大同小异，主料都是半肥半瘦的猪肉，加入配料焖制而成，成品菜都是码得整整齐齐的麻将块儿，红得透亮，色如玛瑙，夹起一块尝尝，软而不烂，肥而不腻。</p>
+		<p><a href="东坡肉.htm">了解更多...</a></p></div>
+		<p><input type="button" class="shopButtonR" style="margin-top: 120px;" onclick="addfood(12)" id="btn1" value="加入菜单"></p>
+		<br class="clear"/>
+		<h1>干炸响铃</h1>
+		<div class="lft_txt"><p>干炸响铃又名“炸响铃”，是中国浙江省杭州市传统风味名菜，为浙江菜系</p>
+		<p>干炸响铃用优质豆腐皮、猪里脊肉、鸡蛋黄等用料制作而成，色泽黄亮，形如马铃，酥香味鲜，松脆爽口</p>
+		<p>1956年，干炸响铃被评为36道杭州名菜之一</p>
+		<p><a href="干炸响铃.htm">了解更多...</a></p>
+		<p><input type="button" class="shopButtonL"  onclick="addfood(14)" id="btn1" value="加入菜单"></p>
+		</div>
+		<div class="rgt_img"><img src="../images/干炸响铃.jpg"\></div>
+		<br class="clear"/>
+		<h1>油焖春笋</h1>	
+		<div class="lft_img"><img src="../images/油焖春笋.jpg"\></div>
+		<div class="rgt_txt"><p>油焖春笋是浙江省杭州市的一道传统名菜，属浙菜系；该菜品选用清明前后出土的嫩春笋，以重油、重糖烹制而成，其色泽红亮，鲜嫩爽口，鲜咸而带甜味，令人百吃不厌。</p>
+			<p>该菜品是1956年被浙江省认定为36 种杭州名菜之一，2012年入选纪录片《舌尖上的中国》第一集《自然的馈赠》系列美食之一。</p>
+			<p><a href="油焖春笋.htm">了解更多...</a></p>
+			<p><input type="button" class="shopButtonR"  onclick="addfood(15)" id="btn1" value="加入菜单"></p>
+		</div>
+		
+	</div>
+<div id="footer">
+		<p>Copyright 2020, Beijing, China</p>
+</div>
+</body>
+</html>
